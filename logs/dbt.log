@@ -1,0 +1,112 @@
+[0m18:26:28.531747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10347bd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105343880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105343fa0>]}
+
+
+============================== 18:26:28.533997 | 3b7cc22f-876b-4914-8f2d-a5a2d49d2ba1 ==============================
+[0m18:26:28.533997 [info ] [MainThread]: Running with dbt=1.10.4
+[0m18:26:28.534277 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/nguyetha/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init netflix', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:26:28.542570 [debug] [MainThread]: Starter project path: /Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m18:26:28.545871 [info ] [MainThread]: 
+Your new dbt project "netflix" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:26:28.546082 [info ] [MainThread]: Setting up your profile.
+[0m18:31:47.481106 [error] [MainThread]: Encountered an error:
+
+[0m18:31:47.487424 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/click/termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+  File "/Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/click/termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m18:31:47.523377 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 319.03967, "process_in_blocks": "0", "process_kernel_time": 0.145978, "process_mem_max_rss": "123420672", "process_out_blocks": "0", "process_user_time": 0.790638}
+[0m18:31:47.524198 [debug] [MainThread]: Command `dbt init` failed at 18:31:47.524100 after 319.04 seconds
+[0m18:31:47.524552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10347bd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107256d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107256f80>]}
+[0m18:31:47.524901 [debug] [MainThread]: Flushing usage events
+[0m18:31:48.007943 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:32:00.112475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10539bc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d43d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d43280>]}
+
+
+============================== 18:32:00.114546 | 3273cfa9-2c71-4d17-a577-da6918baf316 ==============================
+[0m18:32:00.114546 [info ] [MainThread]: Running with dbt=1.10.4
+[0m18:32:00.114816 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/nguyetha/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt init netflix', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:32:00.122004 [info ] [MainThread]: A project called netflix already exists here.
+[0m18:32:00.123170 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.041548666, "process_in_blocks": "0", "process_kernel_time": 0.072921, "process_mem_max_rss": "103120896", "process_out_blocks": "0", "process_user_time": 0.543982}
+[0m18:32:00.123436 [debug] [MainThread]: Command `dbt init` succeeded at 18:32:00.123384 after 0.04 seconds
+[0m18:32:00.123627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10539bc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d43cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d41cc0>]}
+[0m18:32:00.123804 [debug] [MainThread]: Flushing usage events
+[0m18:32:00.545786 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:33:31.662781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10812fcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097478b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109747fd0>]}
+
+
+============================== 18:33:31.665021 | 6a47891a-6fdd-405b-9273-f27559c0a5dc ==============================
+[0m18:33:31.665021 [info ] [MainThread]: Running with dbt=1.10.4
+[0m18:33:31.665283 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/nguyetha/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init netflix', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:33:31.672997 [debug] [MainThread]: Starter project path: /Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m18:33:31.676080 [info ] [MainThread]: 
+Your new dbt project "netflix" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:33:31.676257 [info ] [MainThread]: Setting up your profile.
+[0m18:35:58.798005 [info ] [MainThread]: Profile netflix written to /Users/nguyetha/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:35:58.804285 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 147.17253, "process_in_blocks": "0", "process_kernel_time": 0.121522, "process_mem_max_rss": "121012224", "process_out_blocks": "0", "process_user_time": 0.663803}
+[0m18:35:58.805686 [debug] [MainThread]: Command `dbt init` succeeded at 18:35:58.805538 after 147.17 seconds
+[0m18:35:58.806434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10812fcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097461d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109745cc0>]}
+[0m18:35:58.807041 [debug] [MainThread]: Flushing usage events
+[0m18:35:59.274917 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:03:30.030217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10776fca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088df7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088dfee0>]}
+
+
+============================== 20:03:30.033171 | 0161775d-982c-49f9-a8d2-0188dca4ff50 ==============================
+[0m20:03:30.033171 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:03:30.033436 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/nguyetha/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:03:30.033693 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/nguyetha/Documents/02_Stuff/06_Databricks DE Project/netflixdbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:03:30.035615 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.03932696, "process_in_blocks": "0", "process_kernel_time": 0.081097, "process_mem_max_rss": "101842944", "process_out_blocks": "0", "process_user_time": 0.554695}
+[0m20:03:30.035871 [debug] [MainThread]: Command `dbt run` failed at 20:03:30.035824 after 0.04 seconds
+[0m20:03:30.036039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10776fca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088df520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088df490>]}
+[0m20:03:30.036204 [debug] [MainThread]: Flushing usage events
+[0m20:03:30.584620 [debug] [MainThread]: An error was encountered while trying to flush usage events
